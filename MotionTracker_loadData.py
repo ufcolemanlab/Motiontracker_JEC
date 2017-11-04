@@ -54,13 +54,13 @@ temp[temp==0] = np.nan
 temp2[temp2==0] = np.nan
 temp3[temp3==0] = np.nan
 
-temp_shift = temp+.1
-temp3_shift = temp3-.1
+temp_shift = temp+.001
+temp3_shift = temp3-.001
 
 
-plt.plot(temp, 'g.')
-plt.plot(temp2, 'b.')
-plt.plot(temp3, 'r.')
+plt.plot(temp_shift, 'g', linewidth=3)
+plt.plot(temp2, 'b', linewidth=3)
+plt.plot(temp3_shift, 'r', linewidth=3)
 plt.ylim([0,2])
 plt.title('tracked in right chamber')
 plt.legend({'Right frametracker','Mid frametracker2', 'Left frametracker3'})
